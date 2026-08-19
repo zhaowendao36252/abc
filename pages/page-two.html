@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="烬校园安全感知平台多模态事件中心，用于查看、筛选和处置校园风险事件。"
+    />
+    <title>多模态事件中心｜烬校园安全感知平台</title>
+    <link rel="stylesheet" href="../css/page-two.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="主导航">
+        <a class="brand" href="../index.html" aria-label="返回安全驾驶舱">
+          <span class="brand-mark" aria-hidden="true">烬</span>
+          <span>
+            <strong>烬安全感知</strong>
+            <small>JIN CAMPUS AI</small>
+          </span>
+        </a>
+
+        <nav class="nav-list">
+          <p class="nav-label">安全中心</p>
+          <a class="nav-item" href="../index.html"><span>⌂</span>安全驾驶舱</a>
+          <a class="nav-item" href="#"><span>⌖</span>数字校园地图</a>
+          <a class="nav-item active" href="page-two.html" aria-current="page">
+            <span>◈</span>多模态事件
+            <b>12</b>
+          </a>
+          <a class="nav-item" href="#"><span>◇</span>AI 分析中心</a>
+
+          <p class="nav-label">资源与洞察</p>
+          <a class="nav-item" href="#"><span>▦</span>设备管理</a>
+          <a class="nav-item" href="#"><span>⌁</span>风险预测</a>
+          <a class="nav-item" href="#"><span>⚙</span>系统设置</a>
+        </nav>
+
+        <div class="system-health">
+          <div class="health-heading">
+            <span>感知网络状态</span>
+            <strong>稳定</strong>
+          </div>
+          <div class="health-bar"><span></span></div>
+          <p><i></i> 248 / 256 个节点在线</p>
+        </div>
+
+        <div class="profile">
+          <span class="avatar">林</span>
+          <span><strong>林予安</strong><small>安全中心值班员</small></span>
+          <button type="button" aria-label="打开用户菜单">•••</button>
+        </div>
+      </aside>
+
+      <div class="main-wrap">
+        <header class="topbar">
+          <button class="menu-button" id="menuButton" type="button" aria-label="展开导航" aria-expanded="false">☰</button>
+          <div class="campus-state"><i></i><span>东校区</span><b>态势感知运行中</b></div>
+          <div class="top-actions">
+            <span class="clock" id="clock">2026-08-19 16:04:28</span>
+            <button class="icon-button" type="button" aria-label="全局搜索">⌕</button>
+            <button class="icon-button has-alert" type="button" aria-label="通知">♢</button>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="page-heading">
+            <div>
+              <p class="eyebrow"><span></span> MULTIMODAL EVENT CENTER</p>
+              <h1>多模态事件中心</h1>
+              <p>融合 CSI、视觉与声音信号，聚合校园异常事件并提供智能处置建议。</p>
+            </div>
+            <div class="heading-actions">
+              <button class="secondary-button" type="button" id="exportButton">⇩ 导出事件</button>
+              <button class="primary-button" type="button" id="createButton">＋ 新建人工事件</button>
+            </div>
+          </section>
+
+          <section class="metrics" aria-label="事件概览">
+            <article class="metric-card danger">
+              <div class="metric-icon">!</div>
+              <div><span>待处理事件</span><strong>12</strong><small><b>↑ 3</b> 较昨日同时段</small></div>
+              <em>高风险 4</em>
+            </article>
+            <article class="metric-card warning">
+              <div class="metric-icon">◌</div>
+              <div><span>今日已处置</span><strong>28</strong><small>平均响应 <b>4m 12s</b></small></div>
+              <em>效率 +18%</em>
+            </article>
+            <article class="metric-card success">
+              <div class="metric-icon">✓</div>
+              <div><span>AI 判断准确率</span><strong>96.8<sup>%</sup></strong><small>已分析 1,284 条信号</small></div>
+              <em>持续学习</em>
+            </article>
+            <article class="metric-card info">
+              <div class="metric-icon">⌁</div>
+              <div><span>当前感知区域</span><strong>42</strong><small>覆盖 18 栋校园建筑</small></div>
+              <em>在线率 96.9%</em>
+            </article>
+          </section>
+
+          <section class="workspace">
+            <div class="event-panel">
+              <form class="filter-form" id="filterForm">
+                <label class="search-field">
+                  <span>⌕</span>
+                  <input id="searchInput" type="search" placeholder="搜索事件编号、位置或关键词" autocomplete="off" />
+                </label>
+                <label>
+                  <span class="sr-only">风险等级</span>
+                  <select id="riskFilter">
+                    <option value="all">全部风险等级</option>
+                    <option value="高风险">高风险</option>
+                    <option value="中风险">中风险</option>
+                    <option value="低风险">低风险</option>
+                  </select>
+                </label>
+                <label>
+                  <span class="sr-only">事件类型</span>
+                  <select id="typeFilter">
+                    <option value="all">全部事件类型</option>
+                    <option value="人员跌倒">人员跌倒</option>
+                    <option value="异常停留">异常停留</option>
+                    <option value="非授权进入">非授权进入</option>
+                    <option value="异常声音">异常声音</option>
+                  </select>
+                </label>
+                <label>
+                  <span class="sr-only">处理状态</span>
+                  <select id="statusFilter">
+                    <option value="all">全部处理状态</option>
+                    <option value="待处理">待处理</option>
+                    <option value="处理中">处理中</option>
+                    <option value="已处置">已处置</option>
+                  </select>
+                </label>
+                <button class="filter-button" type="submit">筛选</button>
+                <button class="reset-button" id="resetButton" type="reset">重置</button>
+              </form>
+
+              <div class="panel-toolbar">
+                <div>
+                  <h2>实时事件流</h2>
+                  <span id="resultCount">共 6 条事件</span>
+                </div>
+                <div class="view-tabs" role="tablist" aria-label="视图切换">
+                  <button class="active" type="button" role="tab" aria-selected="true">列表</button>
+                  <button type="button" role="tab" aria-selected="false">时间轴</button>
+                </div>
+              </div>
+
+              <div class="event-list" id="eventList">
+                <button class="event-row active" type="button" data-id="E20260819042" data-risk="高风险" data-type="人员跌倒" data-status="待处理" data-search="体育馆 西侧楼梯 人员跌倒">
+                  <span class="risk-line high"></span>
+                  <span class="event-symbol fall">人</span>
+                  <span class="event-main"><strong>检测到疑似人员跌倒</strong><small><i>⌖</i> 体育馆 · 西侧楼梯间</small></span>
+                  <span class="fusion"><b>CSI</b><b>视觉</b><b>声音</b></span>
+                  <span class="event-confidence"><small>置信度</small><strong>98.6%</strong></span>
+                  <span class="event-time"><strong>刚刚</strong><small>16:03:42</small></span>
+                  <span class="status pending">待处理</span>
+                  <span class="row-arrow">›</span>
+                </button>
+                <button class="event-row" type="button" data-id="E20260819041" data-risk="高风险" data-type="非授权进入" data-status="处理中" data-search="实验楼 3层机房 非授权进入">
+                  <span class="risk-line high"></span>
+                  <span class="event-symbol access">禁</span>
+                  <span class="event-main"><strong>非授权人员进入限制区域</strong><small><i>⌖</i> 实验楼 · 3 层机房</small></span>
+                  <span class="fusion"><b>视觉</b><b>门禁</b></span>
+                  <span class="event-confidence"><small>置信度</small><strong>96.2%</strong></span>
+                  <span class="event-time"><strong>2 分钟前</strong><small>16:01:18</small></span>
+                  <span class="status handling">处理中</span>
+                  <span class="row-arrow">›</span>
+                </button>
+                <button class="event-row" type="button" data-id="E20260819037" data-risk="中风险" data-type="异常声音" data-status="待处理" data-search="宿舍A区 2栋北侧 异常声音 玻璃破碎">
+                  <span class="risk-line medium"></span>
+                  <span class="event-symbol sound">声</span>
+                  <span class="event-main"><strong>识别到高分贝玻璃破碎声</strong><small><i>⌖</i> 宿舍 A 区 · 2 栋北侧</small></span>
+                  <span class="fusion"><b>声音</b><b>CSI</b></span>
+                  <span class="event-confidence"><small>置信度</small><strong>91.4%</strong></span>
+                  <span class="event-time"><strong>8 分钟前</strong><small>15:55:03</small></span>
+                  <span class="status pending">待处理</span>
+                  <span class="row-arrow">›</span>
+                </button>
+                <button class="event-row" type="button" data-id="E20260819031" data-risk="中风险" data-type="异常停留" data-status="处理中" data-search="图书馆 闭馆区 异常停留">
+                  <span class="risk-line medium"></span>
+                  <span class="event-symbol stay">停</span>
+                  <span class="event-main"><strong>人员在闭馆区域异常停留</strong><small><i>⌖</i> 图书馆 · 西区四层</small></span>
+                  <span class="fusion"><b>CSI</b><b>视觉</b></span>
+                  <span class="event-confidence"><small>置信度</small><strong>88.9%</strong></span>
+                  <span class="event-time"><strong>14 分钟前</strong><small>15:49:27</small></span>
+                  <span class="status handling">处理中</span>
+                  <span class="row-arrow">›</span>
+                </button>
+                <button class="event-row" type="button" data-id="E20260819022" data-risk="低风险" data-type="异常停留" data-status="已处置" data-search="教学楼B栋 连廊 异常停留">
+                  <span class="risk-line low"></span>
+                  <span class="event-symbol stay">停</span>
+                  <span class="event-main"><strong>连廊区域人员聚集时间过长</strong><small><i>⌖</i> 教学楼 B 栋 · 二层连廊</small></span>
+                  <span class="fusion"><b>CSI</b></span>
+                  <span class="event-confidence"><small>置信度</small><strong>82.5%</strong></span>
+                  <span class="event-time"><strong>26 分钟前</strong><small>15:37:51</small></span>
+                  <span class="status resolved">已处置</span>
+                  <span class="row-arrow">›</span>
+                </button>
+                <button class="event-row" type="button" data-id="E20260819018" data-risk="低风险" data-type="异常声音" data-status="已处置" data-search="食堂 后勤通道 异常声音">
+                  <span class="risk-line low"></span>
+                  <span class="event-symbol sound">声</span>
+                  <span class="event-main"><strong>后勤通道出现持续异常声响</strong><small><i>⌖</i> 第一食堂 · 后勤通道</small></span>
+                  <span class="fusion"><b>声音</b></span>
+                  <span class="event-confidence"><small>置信度</small><strong>79.8%</strong></span>
+                  <span class="event-time"><strong>38 分钟前</strong><small>15:25:40</small></span>
+                  <span class="status resolved">已处置</span>
+                  <span class="row-arrow">›</span>
+                </button>
+                <div class="empty-state" id="emptyState" hidden>
+                  <span>⌕</span><strong>没有找到匹配事件</strong><p>请调整筛选条件后重试。</p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="detail-panel" id="detailPanel" aria-label="事件详情">
+              <div class="detail-heading">
+                <div><span class="risk-badge">高风险</span><small>事件编号 E20260819042</small></div>
+                <button type="button" id="closeDetail" aria-label="关闭详情">×</button>
+              </div>
+              <h2>疑似人员跌倒</h2>
+              <p class="detail-location">⌖ 体育馆 · 西侧楼梯间</p>
+
+              <div class="scene-preview">
+                <div class="scan-grid"></div>
+                <span class="zone zone-one">CSI-07</span>
+                <span class="zone zone-two">VIS-12</span>
+                <div class="target-ring"><span></span></div>
+                <div class="preview-caption"><i></i>实时感知画面 · 隐私脱敏</div>
+              </div>
+
+              <div class="detail-tabs" role="tablist">
+                <button class="active" type="button" role="tab">AI 分析</button>
+                <button type="button" role="tab">处置记录</button>
+              </div>
+
+              <section class="analysis-card">
+                <div class="analysis-title"><span>✦</span><div><strong>AI 综合判断</strong><small>多模态融合置信度 98.6%</small></div></div>
+                <p>目标人体姿态在 1.2 秒内由直立转为水平，CSI 动态特征与视觉骨架变化高度吻合，同时检测到短促撞击声。</p>
+                <div class="signal-bars">
+                  <label><span>CSI 空间感知 <b>99%</b></span><i><em style="width:99%"></em></i></label>
+                  <label><span>视觉辅助分析 <b>97%</b></span><i><em style="width:97%"></em></i></label>
+                  <label><span>声音事件识别 <b>84%</b></span><i><em style="width:84%"></em></i></label>
+                </div>
+              </section>
+
+              <section class="suggestion">
+                <strong><span>!</span>建议立即处置</strong>
+                <p>联系体育馆值班人员前往确认，同时保持感知节点持续跟踪。</p>
+              </section>
+
+              <label class="assign-field">
+                <span>指派处置人员</span>
+                <select id="assigneeSelect">
+                  <option>张伟 · 体育馆安保</option>
+                  <option>陈昕 · 校园巡逻组</option>
+                  <option>李航 · 安全中心</option>
+                </select>
+              </label>
+              <div class="detail-actions">
+                <button class="secondary-button" type="button" id="falseAlarmButton">标记误报</button>
+                <button class="primary-button" type="button" id="dispatchButton">确认并派单</button>
+              </div>
+            </aside>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><p>操作成功</p></div>
+    <script src="../js/page-two.js"></script>
+  </body>
+</html>
