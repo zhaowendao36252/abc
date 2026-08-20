@@ -1,0 +1,1 @@
+CREATE INDEX `transactions_date_idx` ON `transactions` (`transaction_date`);
